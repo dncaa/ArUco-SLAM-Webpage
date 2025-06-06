@@ -41,3 +41,8 @@ a {
     background-color: antiquewhite;
     color: tomato;
 }
+
+video {
+    max-width: 100%;
+    height: auto;
+}
