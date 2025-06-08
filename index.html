@@ -17,12 +17,18 @@
   <div class="container">
     <header id="header">
       <h1>SLAM for Indoor Localization and Mapping on a Drone</h1>
-      <p>This project investigates the use of SLAM techniques for drones in indoor environments.</p>
+      <p>This project focuses on the development of a GPS-free drone localization and mapping system using ArUco Tags and SLAM techniques. In environments where GPS is unreliable or unavailable such as indoors, underground, or in disaster-stricken areas, accurate and real-time localization remains a significant challenge. To address this, our system integrates camera-based ARTag detection with visual-inertial SLAM algorithms. The goal is to enable real-time, accurate drone localization and mapping using only onboard sensors.</p>
     </header>
 
+    <section id="slam-explanation">
+      <h2>What is EKF-SLAM?</h2>
+      <p>Simultaneous Localization and Mapping (SLAM) is a technique that allows a robot or drone to build a map of an unknown environment while simultaneously tracking its own position within that map. In our project, we implemented an Extended Kalman Filter (EKF)-based SLAM system to enable a drone to navigate and localize itself indoors using only onboard sensors. The drone processes video footage to detect both visual features and ArUco markers in the environment. Visual odometry estimates the drone’s motion between frames, while detected markers are used to correct and refine its pose using EKF updates. The system incrementally builds a map of marker positions and produces a 3D trajectory of the drone’s path. This allows for accurate indoor localization even in GPS-denied environments.</p>
+    </section>
+
     <section id="info">
-      <h2>Project Info</h2>
-      <p>Some detailed information about the algorithms, components, and methodology used.</p>
+      <h2>Project Details</h2>
+      <h3>Hardware Build</h3>
+      <p>For this project, we used the DuckieDrone21 platform, which is a quadcopter specifically designed for indoor autonomy and research. The drone consists of a Raspberry Pi 3B+ as its onboard computer, connected to an ESC/Power board that supplies regulated power to the Pi and the motors. A flight controller is responsible for managing the low-level flight dynamics such as motor speeds, stabilization, and attitude control. It communicates with the Raspberry Pi, receiving high-level velocity commands and sending back IMU and state data. The flight controller ensures that the drone can maintain stable flight while the Raspberry Pi handles higher-level tasks such as SLAM and decision-making. The camera, mounted at the front of the drone, streams live video for SLAM processing.</p>
     </section>
 
     <section id="media">
