@@ -27,8 +27,26 @@
 
     <section id="info">
       <h2>Project Details</h2>
-      <h3>Hardware Build</h3>
+      <h3>Hardware</h3>
+      <h4>Duckiedrone21 Assembly</h4>
       <p>For this project, we used the DuckieDrone21 platform, which is a quadcopter specifically designed for indoor autonomy and research. The drone consists of a Raspberry Pi 3B+ as its onboard computer, connected to an ESC/Power board that supplies regulated power to the Pi and the motors. A flight controller is responsible for managing the low-level flight dynamics such as motor speeds, stabilization, and attitude control. It communicates with the Raspberry Pi, receiving high-level velocity commands and sending back IMU and state data. The flight controller ensures that the drone can maintain stable flight while the Raspberry Pi handles higher-level tasks such as SLAM and decision-making. The camera, mounted at the front of the drone, streams live video for SLAM processing.</p>
+      
+      <h4>Power Management</h4>
+      <p>
+      The drone is powered by a 3-cell Lithium Polymer (LiPo) battery. Proper battery management is essential to avoid discharge (below 10.5V) and overcharging, both of which can damage the battery. We monitored voltage levels during testing and used safe charging protocols to maintain battery health.
+      </p>
+      
+      <h3>Software Environment</h3>
+      <p>
+      The onboard Raspberry Pi runs Ubuntu 18.04, with Robot Operating System (ROS) Melodic used for handling low-level communication and interfacing with the camera. The camera feed is published as a ROS topic, which can be visualized and used in real-time through the web interface.      </p>
+      <h3>Flying DuckieDrone21</h3>
+      <p>
+      Flying the DuckieDrone21 begins with preparing the software environment by setting up a Docker workspace using the <code>pidrone_pkg</code> repository. After verifying that the drone’s battery is sufficiently charged, we connect to the drone's Wi-Fi network from the base station. Using the terminal, an SSH connection is established with the drone via <code>ssh duckie@amelia.local</code> (default password: <code>quackquack</code>).
+      Once connected, we navigate to the <code>pidrone_pkg</code> directory and start the Docker container by executing <code>rake start</code>. A screen session is then launched using <code>screen -c pi.screenrc</code>, which initializes the necessary ROS nodes. 
+      The web-based control interface is accessed by opening <code>index.html</code> located in <code>/pidrone_pkg/web/</code>, and loading it in a browser using the drone’s VLAN IP address as the hostname. Through this interface, we can monitor telemetry, view the camera feed, and send flight commands.
+      Finally, the flight control system is activated by switching to the <code>1*$FC</code> screen tab and running <code>python flight_controller_node.py</code>. With the setup complete, the web interface can be used to arm the drone, select flight modes, and control its movement safely during SLAM experiments.
+      </p>
+      
     </section>
 
     <section id="media">
