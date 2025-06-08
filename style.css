@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1300px;
   margin: auto;
   padding-top: 60px; /* space below fixed navbar */
 }
@@ -43,8 +43,17 @@ header, section, footer {
   margin-bottom: 40px;
 }
 
-h1, h2, h3 {
-  color: #004466;
+h1, h2 {
+  color: #02354e;
+}
+
+
+h3 {
+  color: #075277;
+}
+
+h4 {
+  color: #1778a8;
 }
 
 img {
