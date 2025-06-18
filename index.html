@@ -7,19 +7,34 @@
 </head>
 <body>
 
-  <nav class="topnav">
-    <a class="active" href="#header">Introduction</a>
-    <a href="#info">Information</a>
-    <a href="#media">Gallery</a>
-    <a href="poster.pdf" target="_blank">Poster</a>
-    <a href="https://github.com/ecemsl/DuckieDroneSlam" target="_blank">GitHub</a>
-  </nav>
+<nav class="topnav">
+  <div class="nav-row">
+    <div class="nav-logo">
+      <img src="images/hacettepe_logo.png" alt="left logo">
+    </div>
+
+    <div class="nav-title">SLAM for Indoor Localization and Mapping on a Drone</div>
+    <div class="nav-logo">
+      <img src="images/duckie_logo.png" alt="right logo">
+    </div>
+  </div>
+
+  <div class="nav-links-container">
+    <div class="nav-links">
+      <a class="active" href="#header">Introduction</a>
+      <a href="#info">Information</a>
+      <a href="#media">Gallery</a>
+      <a href="poster.pdf" target="_blank">Poster</a>
+      <a href="https://github.com/ecemsl/DuckieDroneSlam" target="_blank">GitHub</a>
+    </div>
+  </div>
+</nav>
+
 
   <div class="container">
-    <header id="header">
-      <h1>SLAM for Indoor Localization and Mapping on a Drone</h1>
+    <section id="intro">
       <p>This project focuses on the development of a GPS-free drone localization and mapping system using ArUco Tags and SLAM techniques. In environments where GPS is unreliable or unavailable such as indoors, underground, or in disaster-stricken areas, accurate and real-time localization remains a significant challenge. To address this, our system integrates camera-based ARTag detection with visual-inertial SLAM algorithms. The goal is to enable real-time, accurate drone localization and mapping using only onboard sensors.</p>
-    </header>
+    </section>
 
     <section id="slam-explanation">
       <h2>What is EKF-SLAM?</h2>
@@ -52,9 +67,17 @@
 
     <section id="media">
       <h2>Photos</h2>
-      <img src="images/drone-topdown.jpg" alt="Drone top down" width="300">
 
+      <img src="images/drone_assembly_1.jpg" alt="assembly 1" width="300">
+      <img src="images/drone_assembly_2.jpg" alt="assembly 2" width="300">
+      <img src="images/drone-topdown.jpg" alt="Drone top down" width="300">
       <img src="images/setup.jpg" alt="Setup" width="300">
+      <img src="images/simulation_env.jpg" alt="" width="300">
+      <img src="images/tags.jpg" alt="" width="300">
+      <img src="images/vis_1.jpg" alt="" width="300">
+      <img src="images/vis_2.jpg" alt="" width="300">
+
+
 
       <h2>Videos</h2>
       <video width="500" controls>
@@ -74,8 +97,15 @@
       </video>
     </section>
 
+    <section id="names">
+      <p><strong>Ahmet Tunca Taşkın | 2220356191</strong></p>
+      <p><strong>Pınar Bektaş | 2200356098</strong></p>
+      <p><strong>Ecem Selin Demir | 2200356079</strong></p>
+      <p><strong>Advisor: Asst. Prof. Özgür Erkent</strong></p>
+    </section>
+
     <footer>
-      2025 Hacettepe University
+      © 2025 Hacettepe University
     </footer>
   </div>
 

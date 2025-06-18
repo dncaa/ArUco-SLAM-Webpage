@@ -8,36 +8,73 @@ body {
 .container {
   max-width: 1300px;
   margin: auto;
-  padding-top: 60px; /* space below fixed navbar */
+  padding-top: 180px; /* space below fixed navbar */
 }
 
 .topnav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #4988a8;
-  overflow: hidden;
+  background-color:#02354e;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.topnav a {
-  float: left;
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.nav-logo img {
+  height: 100px;
+  max-width: 100px;
+  object-fit: contain;
+  margin-left: -50px;
+  margin-right: -50px;
+  margin-bottom: 10px;
+}
+
+.nav-title {
   color: white;
-  padding: 16px 20px;
-  text-decoration: none;
-  font-size: 17px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
 }
 
-.topnav a:hover {
+.nav-links-container {
+  width: 100%;
+  background-color: #075277;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links a:hover {
   background-color: antiquewhite;
   color: tomato;
 }
 
-.topnav a.active {
-  background-color: #004466;
-  color: white;
-}
 
 header, section, footer {
   margin-bottom: 40px;
@@ -58,7 +95,7 @@ h4 {
 
 img {
   margin: 10px;
-  border: 2px solid #ccc;
+  border: #f9f9f9;
   border-radius: 8px;
 }
 
